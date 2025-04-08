@@ -88,12 +88,6 @@ maven_install(
             testonly = True,
         ),
         maven.artifact(
-            "org.easymock",
-            "easymock",
-            "3.1",
-            testonly = True,
-        ),
-        maven.artifact(
             "org.hibernate",
             "hibernate-core-jakarta",
             "5.6.15.Final",
