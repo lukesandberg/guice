@@ -16,8 +16,8 @@
 
 package com.google.inject.persist.jpa;
 
-import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
+
+import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -57,7 +57,7 @@ public class JpaPersistServiceTest extends TestCase {
       sut.end();
       fail("Exception expected");
     } catch (SimulatedException expected) {
-      assertThat(sut.isWorking(), is(false));
+      assertThat(sut.isWorking()).isFalse();
     }
   }
 

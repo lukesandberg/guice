@@ -7,6 +7,5 @@ java_library(
     testonly = 1,
     exports = [
         "@maven//:junit_junit",
-        "@maven//:org_hamcrest_hamcrest",
     ],
 )

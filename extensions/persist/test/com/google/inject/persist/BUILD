@@ -25,13 +25,13 @@ java_library(
         ":metainf",
         "//core/src/com/google/inject",
         "//extensions/persist/src/com/google/inject/persist",
-        "//third_party/java/hamcrest",
         "//third_party/java/hibernate:hibernate5",
         "//third_party/java/hsqldb:hsqldb2",
         "//third_party/java/jakarta_inject",
         "//third_party/java/jakarta_persistence",
         "//third_party/java/junit",
         "//third_party/java/mockito",
+        "//third_party/java/truth",
     ],
 )
 

@@ -94,12 +94,6 @@ maven_install(
             testonly = True,
         ),
         maven.artifact(
-            "org.hamcrest",
-            "hamcrest",
-            "2.2",
-            testonly = True,
-        ),
-        maven.artifact(
             "org.hibernate",
             "hibernate-core-jakarta",
             "5.6.15.Final",

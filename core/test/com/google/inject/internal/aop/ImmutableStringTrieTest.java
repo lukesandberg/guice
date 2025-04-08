@@ -16,11 +16,10 @@
 
 package com.google.inject.internal.aop;
 
+import static com.google.common.truth.Truth.assertThat;
 import static java.util.Arrays.stream;
 import static java.util.Collections.sort;
 import static java.util.stream.Collectors.toList;
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.inject.Binder;
@@ -43,7 +42,7 @@ public class ImmutableStringTrieTest extends TestCase {
 
   public void testSingletonTrie() {
     ToIntFunction<String> trie = ImmutableStringTrie.buildTrie(ImmutableSet.of("testKey"));
-    assertThat(trie.applyAsInt("testKey"), is(0));
+    assertThat(trie.applyAsInt("testKey")).isEqualTo(0);
   }
 
   public void testMethodStrings() {
@@ -55,7 +54,7 @@ public class ImmutableStringTrieTest extends TestCase {
     ToIntFunction<String> trie = ImmutableStringTrie.buildTrie(table);
 
     for (int i = 0; i < table.size(); i++) {
-      assertThat(trie.applyAsInt(table.get(i)), is(i));
+      assertThat(trie.applyAsInt(table.get(i))).isEqualTo(i);
     }
   }
 
@@ -80,7 +79,7 @@ public class ImmutableStringTrieTest extends TestCase {
     ToIntFunction<String> trie = ImmutableStringTrie.buildTrie(table);
 
     for (int i = 0; i < table.size(); i++) {
-      assertThat(trie.applyAsInt(table.get(i)), is(i));
+      assertThat(trie.applyAsInt(table.get(i))).isEqualTo(i);
     }
   }
 
